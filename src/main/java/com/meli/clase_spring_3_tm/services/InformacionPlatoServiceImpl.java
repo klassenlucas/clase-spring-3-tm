@@ -20,7 +20,6 @@ public class InformacionPlatoServiceImpl implements InformacionPlatoService {
     @Override
     public InformacionPlatoDTO getInformation(PlatoDTO plato) {
         this.setCaloriasIngredientes(plato.getIngredients());
-        System.out.println(plato.getIngredients());
         if(plato.getIngredients().size() > 0)
         return new InformacionPlatoDTO(
                 getCaloriasTotales(plato),
